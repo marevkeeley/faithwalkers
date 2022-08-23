@@ -50,7 +50,7 @@
             pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
 
             //saving to json
-            const fs = require('fs');
+            const fs = import('fs');
             let json = JSON.stringify(movies);
             fs.writeFile('Registers.json', json);
         }
