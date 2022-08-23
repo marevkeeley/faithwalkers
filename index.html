@@ -49,9 +49,8 @@
 
             //saving to json
             const fs = require('fs');
-            const json = JSON.parse(file.toString())
-            json.push(data);
-            fs.writeFileSync("Registers.json", JSON.stringify(data))
+            let json = JSON.stringify(movies);
+            fs.writeFile('Registers.json', json);
         }
         document.addEventListener('DOMContentLoaded', ()=>{
             document.getElementById('btn').addEventListener('click', addMovie);
